@@ -1,0 +1,11 @@
+---
+layout: default
+title: MyBlog
+---
+<h2>{{page.title}}</h2>
+<p>TheNewestPosts</p>
+<ul>
+{% for post in site.post %}
+<li>{ {post.data | data_to_string } }<a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></li>
+{% endfor %}
+</ul>
